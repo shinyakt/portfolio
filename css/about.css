@@ -145,7 +145,7 @@ li{
 /* fv
 /* ------------------- */
 .fv{
-    height: 100vh;
+    height: 60vh;
     min-height: 550px;
     position: relative;
     background-image: url(/img/fv-img.jpg);  /*スライダー画像を追加したので削除*/
@@ -158,7 +158,7 @@ li{
     /* bottom: 177px; */
     /* color: #fff; */
     text-align: center;
-    margin-top: 280px;
+    margin-top: 180px;
     /* color: black; */
     color: aliceblue;
     font-weight: bold;
@@ -175,115 +175,65 @@ li{
 /* ------------------- */
 /* about
 /* ------------------- */
-.about-bg{
-    background-image: url(/img/about-bg-img.jpg);
-    background-size: cover;
-    padding: 0;
-}
-.about-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-/* ------------------- */
-/* works
-/* ------------------- */
-.section-wrapper.works{
-    background-color: aliceblue;
-}
-.section-inner.works{
+.section-wrapper.about{
+    padding-top: 100px;
     max-width: 1200px;
     margin: 0 auto;
 }
-.works-list{
+.flex{
     display: flex;
-    margin-bottom: 60px;
-}
-.works-item{
-    width: 33%;
-    margin-right: 20px;
     box-sizing: border-box;
+    max-width: initial;
 }
-.works-item:last-of-type{
-    margin-right: 0;
-}
-.works-item-title{
-    text-align: center;
-}
-.works-item a{
-    /* color: #fff; */
-    color: black;
-    text-decoration: none;
-    transition: .3s;
-}
-
-/* ------------------- */
-/* skill
-/* ------------------- */
-.section-wrapper.skill{
-    background-color: aliceblue;
-}
-.skill-list-content{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.skill-list{
+table{
     width: 100%;
+    border-collapse: collapse;
+    border: solid #CCC;
+    border-width: 1px;
+    font-size: 2rem;
+    line-height: 2;
+    margin-bottom: 50px;
 }
-.skill-item{
-    display: flex;
-    margin-bottom: 30px;
+tr, th, td{
+    border: solid #CCC;
+    padding: 0 10px;
 }
-.skill-item:last-of-type{
-    margin-bottom: 0;
-}
-.skill-item-img-wrapper{
-    max-width: 100px;
-    margin-right: 20px;
-}
-.skill-img{
-    width: 100%;
-    object-fit: contain;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 30px;
-}
-.skill-item-content-text{
+th {
+    width: 35%;
+    background: #eee;
     font-weight: normal;
 }
-.skill-item-content-name{
-    font-size: 2.5rem;
-    /* font-weight: bold; */
-    display: inline-block;
-    border-bottom: black 2px solid;
+article{
+    width: 75%;
+    margin-right: 70px;
+}
+aside{
+    width: 25%;
+    text-align: center;
+}
+.about-title{
+    font-size: 3rem;
     margin-bottom: 20px;
+    border-bottom: #333333 2px solid;
+    display: inline-block;
+    margin-left: 35%;
 }
-
-/* ------------------- */
-/* contact
-/* ------------------- */
-.section-wrapper.contact{
-    /* background-color: whitesmoke; */
+.about-text{
+    font-size: 2rem;
+    line-height: 2;
 }
-.contact-bg{
-    background-image: url(/img/fv-img.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 0;
+.icon{
+    max-width: 20%;
+    margin-top: 20px;
 }
-.contact-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: 90vh;
-    box-sizing: border-box;
+.sub-title{
+    font-size: 2.5rem;
+    font-style: italic;
+    /* text-align: center; */
+    border-bottom: #333333 2px solid;
+    margin-bottom: 40px;
+    display: inline-block;
 }
-.section-text.contact{
-    margin: 100px 0;
-}
-
 
 /* ------------------- */
 /* footer
@@ -423,52 +373,15 @@ button:hover{                     /*クリックしないと変わらない？�
 /* ------------------- */
 /* about_tb
 /* ------------------- */
-.section-wrapper.about-bg{
-    padding: 0;
+.flex{
+    flex-direction: column;
 }
-.section-inner.about-bg-color{
-    padding: 60px 4vw;
-}
-
-
-/* ------------------- */
-/* works_tb
-/* ------------------- */
-
-
-/* ------------------- */
-/* skill_tb
-/* ------------------- */
-.skill-item-img-wrapper {
-    max-width: 60px;
-    margin-right: 20px;
-}
-.skill-img{
+article{
     width: 100%;
-    object-fit: contain;
-    padding: 0;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 20px;
 }
-.skill-item-content{
-    /* text-align: center; */
+aside{
+    width: 100%;
 }
-
-
-/* ------------------- */
-/* contact_tb
-/* ------------------- */
-.contact-bg{
-    background-position: left;
-}
-.section-wrapper.contact-bg{
-    padding: 0;
-}
-.section-inner.contact-bg-color{
-    padding: 60px 4vw;
-}
-
 
 }
 
@@ -490,19 +403,8 @@ button:hover{                     /*クリックしないと変わらない？�
 .section-text{
     line-height: 2;
 }
-
-/* ------------------- */
-/* works_sp
-/* ------------------- */
-.works-list{
-    flex-direction: column;
-}
-.works-item{
-    width: 100%;
-    margin: 0 0 50px 0;
-}
-.works-item:last-of-type{
-    margin-bottom: 0;
+.about-title{
+    margin-left: 30%;
 }
 
 

@@ -145,7 +145,7 @@ li{
 /* fv
 /* ------------------- */
 .fv{
-    height: 100vh;
+    height: 60vh;
     min-height: 550px;
     position: relative;
     background-image: url(/img/fv-img.jpg);  /*スライダー画像を追加したので削除*/
@@ -158,7 +158,7 @@ li{
     /* bottom: 177px; */
     /* color: #fff; */
     text-align: center;
-    margin-top: 280px;
+    margin-top: 180px;
     /* color: black; */
     color: aliceblue;
     font-weight: bold;
@@ -172,118 +172,159 @@ li{
     /* text-align: center; */
 }
 
-/* ------------------- */
-/* about
-/* ------------------- */
-.about-bg{
-    background-image: url(/img/about-bg-img.jpg);
-    background-size: cover;
-    padding: 0;
-}
-.about-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-/* ------------------- */
-/* works
-/* ------------------- */
-.section-wrapper.works{
-    background-color: aliceblue;
-}
-.section-inner.works{
-    max-width: 1200px;
+/* ----------------------- */
+/* contact
+/* ----------------------- */
+input,textarea{
+    resize: none;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+  }
+.contact-wrapper {
+    padding: 120px 0;
+  }
+.contact-inner{
+    max-width: 700px;
+    padding: 0 30px;
     margin: 0 auto;
 }
-.works-list{
-    display: flex;
-    margin-bottom: 60px;
+.form-item-title{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 10px 0 0;
 }
-.works-item{
-    width: 33%;
-    margin-right: 20px;
-    box-sizing: border-box;
-}
-.works-item:last-of-type{
-    margin-right: 0;
-}
-.works-item-title{
+.required{
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #525252;
     text-align: center;
 }
-.works-item a{
-    /* color: #fff; */
-    color: black;
-    text-decoration: none;
+.contact-lead{
+    line-height: 1.5;
+    /* font-weight: bold; */
+    margin-bottom: 55px;
+  }
+.form-item{
+    margin-bottom: 40px;
+}
+.form-item-title:first-of-type{
+    margin-bottom: 23px;
+}
+.inquiry-type-list{
+    display: flex;
+}
+.inquiry-type-item{
+    margin-right: 50px;
+}
+.text-box{
+    border: #333 1px solid;
+    /* width: 700px; リセットかけてるからいらない*/
+    /* height: 40px; リセットかけてるからいらない*/
+    padding: 10px;
+    box-sizing: border-box;/*paddingの分*/
+    /* line-height: 1.5; */
+}
+.textarea{
+    border: #333 1px solid;
+    /* width: 700px; リセットかけてるからいらない*/
+    /* height: 210px; リセットかけてるからいらない */
+    padding: 10px;   /*入力欄の余白を指定*/
+    box-sizing: border-box;
+    /* line-height: 1.5; */
+}
+.privacy-policy-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.privacy-policy-wrapper{
+    border: #333333 1px solid;
+    margin-bottom: 40px;
+    padding: 10px;
+    height: 210px;
+    overflow: scroll;
+}
+.confirm{
+    width: 700px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.checkbox:hover, .confirm-text{
+    cursor: pointer;
+    opacity: .8;
     transition: .3s;
 }
-
-/* ------------------- */
-/* skill
-/* ------------------- */
-.section-wrapper.skill{
-    background-color: aliceblue;
+.checkbox{
+    border: #333 1px solid;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: -4px;
 }
-.skill-list-content{
-    max-width: 1200px;
-    margin: 0 auto;
+.radio-btn{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #333;
+    border-radius: 50%; 
+    vertical-align: -4px;
 }
-.skill-list{
-    width: 100%;
+.radio-btn:checked{
+    background-color: #333;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 1px #333;
+  }
+.radio-btn:hover{
+    cursor: pointer;
 }
-.skill-item{
-    display: flex;
-    margin-bottom: 30px;
-}
-.skill-item:last-of-type{
-    margin-bottom: 0;
-}
-.skill-item-img-wrapper{
-    max-width: 100px;
-    margin-right: 20px;
-}
-.skill-img{
-    width: 100%;
-    object-fit: contain;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 30px;
-}
-.skill-item-content-text{
-    font-weight: normal;
-}
-.skill-item-content-name{
-    font-size: 2.5rem;
-    /* font-weight: bold; */
-    display: inline-block;
-    border-bottom: black 2px solid;
-    margin-bottom: 20px;
-}
-
-/* ------------------- */
-/* contact
-/* ------------------- */
-.section-wrapper.contact{
-    /* background-color: whitesmoke; */
-}
-.contact-bg{
-    background-image: url(/img/fv-img.jpg);
-    background-size: cover;
+.checkbox:checked{
+    background-color: #fff;
+    background-image: url(/img/icon_chek.svg);
+    background-size: 14px;
+    background-repeat: no-repeat;
     background-position: center;
-    padding: 0;
+  }
+.policy-wrapper{
+    max-width: 700px;
 }
-.contact-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: 90vh;
-    box-sizing: border-box;
+.policy {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
-.section-text.contact{
-    margin: 100px 0;
+.policy-lead{
+    text-align: center;
+    margin-bottom: 10px;
 }
-
+.policy-list::before {
+    content: "・";
+}
+.submit-btn{
+    display: block;
+    width: 235px;
+    line-height: 60px;
+    margin: 0 auto ;
+    background-color: rgb(101, 176, 247);
+    box-shadow: 0 0 6px #1B1310;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s; 
+}
+.submit-btn:hover{
+    opacity: .8;
+    transition: .3s;
+    cursor: pointer;
+  }
 
 /* ------------------- */
 /* footer
@@ -423,51 +464,6 @@ button:hover{                     /*クリックしないと変わらない？�
 /* ------------------- */
 /* about_tb
 /* ------------------- */
-.section-wrapper.about-bg{
-    padding: 0;
-}
-.section-inner.about-bg-color{
-    padding: 60px 4vw;
-}
-
-
-/* ------------------- */
-/* works_tb
-/* ------------------- */
-
-
-/* ------------------- */
-/* skill_tb
-/* ------------------- */
-.skill-item-img-wrapper {
-    max-width: 60px;
-    margin-right: 20px;
-}
-.skill-img{
-    width: 100%;
-    object-fit: contain;
-    padding: 0;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 20px;
-}
-.skill-item-content{
-    /* text-align: center; */
-}
-
-
-/* ------------------- */
-/* contact_tb
-/* ------------------- */
-.contact-bg{
-    background-position: left;
-}
-.section-wrapper.contact-bg{
-    padding: 0;
-}
-.section-inner.contact-bg-color{
-    padding: 60px 4vw;
-}
 
 
 }
@@ -477,33 +473,41 @@ button:hover{                     /*クリックしないと変わらない？�
 /* ------------------- */
 /* base_tb
 /* ------------------- */
-.section-wrapper{
-    padding-top: 30px;
+.contact-wrapper {
+    padding: 60px 0;
 }
 
-/* ------------------- */
-/* about_sp
-/* ------------------- */
-.section-text-wrapper.about{
+/* ----------------------- */
+/* contact_sp
+/* ----------------------- */
+.inquiry-type-list{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 14px;
+  }
+  .inquiry-type-item{
+    margin-bottom: 10px;
+  }
+.confirm{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+}
+.confirm-text{
+    display: inline-block;
     text-align: left;
 }
-.section-text{
-    line-height: 2;
+.checkbox {
+    display: inline-block;
+    border: #333 1px solid;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: -2px;
 }
 
-/* ------------------- */
-/* works_sp
-/* ------------------- */
-.works-list{
-    flex-direction: column;
-}
-.works-item{
-    width: 100%;
-    margin: 0 0 50px 0;
-}
-.works-item:last-of-type{
-    margin-bottom: 0;
-}
 
 
 }
