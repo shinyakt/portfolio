@@ -148,7 +148,7 @@ li{
     height: 100vh;
     min-height: 550px;
     position: relative;
-    background-image: url(/img/fv-img.jpg);  /*スライダー画像を追加したので削除*/
+    background-image: url(https://github.com/shinyakt/portfolio/blob/main/img/fv-img.jpg?raw=true);  /*スライダー画像を追加したので削除*/
     background-size: cover;
     background-position: center;
 }
@@ -176,7 +176,7 @@ li{
 /* about
 /* ------------------- */
 .about-bg{
-    background-image: url(/img/about-bg-img.jpg);
+    background-image: url(https://github.com/shinyakt/portfolio/blob/main/img/about-bg-img.jpg?raw=true);
     background-size: cover;
     padding: 0;
 }
@@ -268,7 +268,7 @@ li{
     /* background-color: whitesmoke; */
 }
 .contact-bg{
-    background-image: url(/img/fv-img.jpg);
+    background-image: url(https://github.com/shinyakt/portfolio/blob/main/img/fv-img.jpg?raw=true);
     background-size: cover;
     background-position: center;
     padding: 0;
