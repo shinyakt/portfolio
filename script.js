@@ -1,4 +1,4 @@
-//読み込みテスト    $('.en-copy').css('color','red');
+$('.en-copy').css('color','red');         //読み込みテスト    
 
 //スティッキーヘッダー
 $(function(){
