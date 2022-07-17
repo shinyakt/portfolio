@@ -9,6 +9,7 @@ body{
     letter-spacing: .05px;
     color: #333333;
     font-family:'Montserrat', 'Noto Sans JP', sans-serif;
+    margine: 0;
 }
 img {
     width: 100%;
