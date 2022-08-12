@@ -9,6 +9,7 @@ body{
     letter-spacing: .05px;
     color: #333333;
     font-family:'Montserrat', 'Noto Sans JP', sans-serif;
+    margin: 0;
 }
 img {
     width: 100%;
@@ -145,10 +146,10 @@ li{
 /* fv
 /* ------------------- */
 .fv{
-    height: 100vh;
+    height: 60vh;
     min-height: 550px;
     position: relative;
-    background-image: url(/img/fv-img.jpg);  /*スライダー画像を追加したので削除*/
+    background-image: url(/img/about-bg-img.jpg);  /*スライダー画像を追加したので削除*/
     background-size: cover;
     background-position: center;
 }
@@ -158,7 +159,7 @@ li{
     /* bottom: 177px; */
     /* color: #fff; */
     text-align: center;
-    margin-top: 280px;
+    margin-top: 180px;
     /* color: black; */
     color: aliceblue;
     font-weight: bold;
@@ -171,126 +172,38 @@ li{
     font-size: 4rem;
     /* text-align: center; */
 }
-
-/* ------------------- */
-/* about
-/* ------------------- */
-.about-bg{
-    background-image: url(/img/about-bg-img.jpg);
-    background-size: cover;
-    padding: 0;
+.slick-arrow{
+    display: none !important;    /*優先順位の変更*/
 }
-.about-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
 /* ------------------- */
 /* works
 /* ------------------- */
 .section-wrapper.works{
-    background-color: aliceblue;
-}
-.section-inner.works{
-    max-width: 1200px;
-    margin: 0 auto;
+    padding-top: 100px;
 }
 .works-list{
-    display: flex;
-    margin-bottom: 60px;
-}
-.works-item{
-    width: 33%;
-    margin-right: 20px;
-    box-sizing: border-box;
-}
-.works-item:last-of-type{
-    margin-right: 0;
-}
-.works-item-title{
-    text-align: center;
-}
-.works-item a{
-    /* color: #fff; */
-    color: black;
-    text-decoration: none;
-    transition: .3s;
-}
-
-/* ------------------- */
-/* skill
-/* ------------------- */
-.section-wrapper.skill{
-    background-color: aliceblue;
-}
-.skill-list-content{
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 150px;
+    place-items: center;
+    /* -webkit-box-pack: center; */
+    /* -ms-flex-pack: center; */
+    /* justify-content: center; */
 }
-.skill-list{
+.works-item{
     width: 100%;
 }
-.skill-item{
-    display: flex;
-    margin-bottom: 30px;
+.works-item a{
+    color: #333333;
 }
-.skill-item:last-of-type{
-    margin-bottom: 0;
+.works-item-title{
+    font-size: 2rem;
+    margin-top: 10px;
+    text-align: center;
 }
-.skill-item-img-wrapper{
-    max-width: 100px;
-    margin-right: 20px;
-}
-.skill-img{
-    width: 100%;
-    object-fit: contain;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 30px;
-}
-.skill-item-content{
-    /* max-width: 1200px; */
-    flex-basis: 800px;
-}
-.skill-item-content-text{
-    font-weight: normal;
-    /* width: 100%; */
-}
-.skill-item-content-name{
-    font-size: 2.5rem;
-    /* font-weight: bold; */
-    display: inline-block;
-    border-bottom: black 2px solid;
-    margin-bottom: 20px;
-    /* width: 100%; */
-}
-
-/* ------------------- */
-/* contact
-/* ------------------- */
-.section-wrapper.contact{
-    /* background-color: whitesmoke; */
-}
-.contact-bg{
-    background-image: url(/img/fv-img.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 0;
-}
-.contact-bg-color{
-    background-color: rgba(250, 250, 250, 0.8);
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: 90vh;
-    box-sizing: border-box;
-}
-.section-text.contact{
-    margin: 100px 0;
-}
-
-
 /* ------------------- */
 /* footer
 /* ------------------- */
@@ -427,54 +340,17 @@ button:hover{                     /*クリックしないと変わらない？�
 }
 
 /* ------------------- */
-/* about_tb
-/* ------------------- */
-.section-wrapper.about-bg{
-    padding: 0;
-}
-.section-inner.about-bg-color{
-    padding: 60px 4vw;
-}
-
-
-/* ------------------- */
 /* works_tb
 /* ------------------- */
-
-
-/* ------------------- */
-/* skill_tb
-/* ------------------- */
-.skill-item-img-wrapper {
-    max-width: 10%;
-    margin-right: 20px;
+.works-list{
+    display: contents;
 }
-.skill-img{
+article{
     width: 100%;
-    object-fit: contain;
-    padding: 0;
-    box-sizing: border-box;
-    border: 5px solid #897777;
-    border-radius: 20px;
 }
-.skill-item-content{
-    /* text-align: center; */
+aside{
+    width: 100%;
 }
-
-
-/* ------------------- */
-/* contact_tb
-/* ------------------- */
-.contact-bg{
-    background-position: left;
-}
-.section-wrapper.contact-bg{
-    padding: 0;
-}
-.section-inner.contact-bg-color{
-    padding: 60px 4vw;
-}
-
 
 }
 
@@ -486,15 +362,8 @@ button:hover{                     /*クリックしないと変わらない？�
 .section-wrapper{
     padding-top: 30px;
 }
-.main-copy {
-    margin-top: 100px;
-    padding: 0 4vw;
-}
-.en-copy{
-    font-size: 3rem;
-}
-.jp-copy{
-    font-size: 2rem;
+.works-item{
+    margin-bottom: 50px;
 }
 
 /* ------------------- */
@@ -506,27 +375,8 @@ button:hover{                     /*クリックしないと変わらない？�
 .section-text{
     line-height: 2;
 }
-
-/* ------------------- */
-/* works_sp
-/* ------------------- */
-.works-list{
-    flex-direction: column;
-}
-.works-item{
-    width: 100%;
-    margin: 0 0 50px 0;
-}
-.works-item:last-of-type{
-    margin-bottom: 0;
-}
-
-/* ------------------- */
-/* skill_tb
-/* ------------------- */
-.skill-item-img-wrapper {
-    max-width: 20%;
-    margin-right: 20px;
+.about-title{
+    margin-left: 30%;
 }
 
 
