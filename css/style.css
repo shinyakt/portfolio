@@ -148,7 +148,7 @@ li{
     height: 100vh;
     min-height: 550px;
     position: relative;
-    background-image: url(/img/fv-img.jpg);  /*スライダー画像を追加したので削除*/
+    background-image: url(https://github.com/shinyakt/portfolio/blob/main/img/fv-img.jpg?raw=true);  /*スライダー画像を追加したので削除*/
     background-size: cover;
     background-position: center;
 }
